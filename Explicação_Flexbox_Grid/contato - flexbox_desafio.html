@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8e1fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #d8e4fb;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(6, 14, 123, 0.941);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: left;
+      color: #5d3bcd;
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #e4d6fa;
+      border-radius: 5px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .limpar {
+      background-color: #a084ec;
+      color: #fdfafa;
+    }
+
+    .enviar {
+      background-color: #630cb0;
+      color: white;
+    }
+
+    .enviar:hover {
+      background-color: #5a3185;
+    }
+
+    .limpar:hover {
+      background-color: #dcb4ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Envie a sua Mensagem</h2>
+
+    <form id="formContato">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Insira o seu email" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX">
+
+      <label for="telemovel">Telemóvel</label>
+      <input type="tel" id="telemovel" name="telemovel" placeholder="(XX) 9XXXX-XXXX">
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem..." required></textarea>
+
+      <div class="botoes">
+        <button type="reset" class="limpar">Limpar</button>
+        <button type="submit" class="enviar">Enviar Mensagem</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    
+    document.getElementById('formContato').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Mensagem enviada com sucesso!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
