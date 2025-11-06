@@ -1,0 +1,91 @@
+ #clean_code {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #Contato {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #mobile_first {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #portfolio_kelly {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+       #ux_ui {
+         width: 80%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+       }
+
+    body {
+    
+     font-family: monospace;
+     background: linear-gradient(to right, #a6a6e6, #c0e4fc);
+     color: #020e4c;
+     line-height: 1.8;
+     padding: 20px;
+    }
+
+    header {
+     background-color: rgb(143, 94, 172);
+     color: rgb(41, 8, 80);
+     padding: 30px 20px;
+     text-align: center;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    a {
+        color:darkblue;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #a6a6e6;
+    }
+
+    button {
+        background-color: #080f16;
+        color: azure;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+
+    }
+
+    button:hover {
+        background-color: #2e9797;
+    }
+
+    .highlight {
+        background-color: #ffffff;
+        border-left: #8e24eb;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(101, 75, 234, 0.05);
+    }
+
+    

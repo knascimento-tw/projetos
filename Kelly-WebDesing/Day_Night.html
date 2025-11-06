@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia_de_Deploy</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+
+<style>
+:root {
+  --fundo-claro: #fff;
+  --fundo-escuro: #000;
+  --botao-primario: #7d1ad4;
+  --botao-primario-hover: #6e17b9;
+  --texto-claro: #000;
+  --texto-escuro: #fff;
+}
+
+
+[data-theme="dark"] {
+  --fundo-claro: #121212;
+  --fundo-escuro: #1e1e1e;
+  --texto-claro: #fff;
+  --texto-escuro: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo-claro);
+  color: var(--texto-claro);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s, color 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-escuro);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.9rem;
+  max-width: 500px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+button {
+  background-color: var(--botao-primario);
+  color: var(--texto-escuro);
+  padding: 0.4rem;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+button:hover {
+  background-color: var(--botao-primario-hover);
+  transform: rotate(15deg);
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  font-size: 34px;
+  color: var(--texto-escuro);
+}
+
+</style>
+</head>
+
+<body>
+  <div>
+    <h1>Dia de Deploy</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Laboriosam quidem explicabo facilis et molestiae eos ratione magni
+      aperiam similique quae? Dolores ad ea, est dolorem error aut
+      vel necessitatibus eos.
+    </p>
+
+    <button id="btn-dark-mode">
+      <span class="material-symbols-rounded">light_mode</span>
+    </button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('btn-dark-mode');
+    const body = document.body;
+
+    
+    if (localStorage.getItem('theme') === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<span class="material-symbols-rounded">dark_mode</span>';
+    }
+
+    btn.addEventListener('click', () => {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+
+      if (isDark) {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        btn.innerHTML = '<span class="material-symbols-rounded">light_mode</span>';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        btn.innerHTML = '<span class="material-symbols-rounded">dark_mode</span>';
+      }
+    });
+  </script>
+</body>
+</html>
