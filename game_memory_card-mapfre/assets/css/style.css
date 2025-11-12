@@ -14,14 +14,14 @@ body {
     justify-content: flex-start; /* Alinha o conteúdo ao topo em telas pequenas */
     align-items: center; /* Centraliza o conteúdo horizontalmente */
     min-height: 100vh; /* Ocupa no mínimo 100% da altura da viewport (tela visível) */
-    background-color: #4D3737; /* Cor de fundo suave para a página */
+    background-color: #024D6D; /* Cor de fundo suave para a página */
     overflow-y: auto; /* Permite rolagem vertical se o conteúdo for maior que a tela */
     overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
 /* --- Estilo do Contêiner Principal do Jogo --- */
 .game-container {
-    background-color: #024D6D; /* Um tom de azul mais claro para o fundo do contêiner */
+    background-color: #077bad; /* Um tom de azul mais claro para o fundo do contêiner */
     padding: 15px; /* Espaçamento interno reduzido para melhor ajuste em telas pequenas */
     border-radius: 15px; /* Bordas arredondadas para um visual mais suave */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito de profundidade */
@@ -34,7 +34,7 @@ body {
 
 /* --- Estilo do Título Principal (Jogo da Memória) --- */
 h1 {
-    color: #2393FD; /* Cor verde escura para o título */
+    color:#FDEC00; /* Cor verde escura para o título */
     margin-bottom: 15px; /* Espaçamento abaixo do título */
     /* Tamanho de fonte responsivo:
        - 'clamp()' escolhe um valor entre um mínimo (1.5em), um ideal (7vw - 7% da largura da viewport), e um máximo (2.5em).
@@ -121,7 +121,7 @@ h1 {
     margin-top: 30px; /* Espaçamento acima do botão */
     padding: 12px 25px; /* Espaçamento interno do botão */
     font-size: clamp(1em, 3vw, 1.2em); /* Tamanho de fonte responsivo para o botão */
-    background-color: #0081AB; /* Cor de fundo laranja para o botão */
+    background-color: #5c4406; /* Cor de fundo laranja para o botão */
     color: rgb(249, 246, 246); /* Cor do texto do botão */
     border: none; /* Remove a borda padrão do botão */
     border-radius: 8px; /* Bordas arredondadas */
@@ -132,7 +132,7 @@ h1 {
 
 /* --- Efeitos ao Passar o Mouse (Hover) no Botão de Reiniciar --- */
 #restart-button:hover {
-    background-color: #0081AB; /* Altera a cor de fundo quando o mouse passa por cima */
+    background-color: #5c4406; /* Altera a cor de fundo quando o mouse passa por cima */
     transform: translateY(-2px); /* Move o botão ligeiramente para cima para um efeito interativo */
 }
 
